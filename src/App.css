@@ -1,33 +1,85 @@
 .App {
-  text-align: center;
-}
+  width: 90%;
+  margin: 40px auto;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  border: 3px solid black;
+  font-size: 20px;
+  font-weight: bold;
+}
+#buttons {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-between;
+}
+#buttons div {
+  border: 1px solid black;
+  width: 24.5%;
+  height: 19%;
+  align-self: stretch;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  background-color: #c7c8cc;
+}
+#buttons div:hover {
+  background-color: #bbbcc0;
+}
+#buttons #subtract {
+  flex-basis: 38.6%;
+  background-color: #fe7e01;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#buttons #add {
+  flex-basis: 38.5%;
+  background-color: #fe7e01;
+  color: white;
+}
+#decimal {
+  flex-grow: 1;
+}
+#null {
+  flex-grow: 1;
+}
+#buttons #equals {
+  flex-grow: 1;
+  background-color: #fe7e01;
+  color: white;
+}
+#zero {
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#display {
+  border: 1px solid black;
+  width: 100%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+  color: white;
+}
+#display p {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 750px) {
+  .App {
+    width: 70%;
+    font-size: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  #buttons div {
+    width: 24.8%;
   }
 }
